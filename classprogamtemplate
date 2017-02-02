@@ -1,0 +1,19 @@
+/*
+file: ***filename****.java
+author: Cassie Schaaf, SD1, January 31
+course: CMPT 200
+assignment: lab ***lab#***
+due date: ***date***
+version: 1.0
+
+This file contains the code to ***file/lab goal summary description***
+*/
+import java.util.Scanner;
+
+public class Degrees0 {
+  public static void main(String[] args){
+
+  //declare variables
+
+  }
+}
