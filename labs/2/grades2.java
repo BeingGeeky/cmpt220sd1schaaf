@@ -46,7 +46,7 @@ public class grades2 {
                    else if (total < 100.0){letterGrade = "A";}
                         else {letterGrade = "ERROR: insufficient data";}
 
-    //display final course grade
+    //display final course grade as a letter grade
     System.out.println("Final Grade for Software Development I: " + letterGrade);
   }
 }
