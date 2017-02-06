@@ -10,13 +10,15 @@ This file contains the code to Lab 2: Problem 3.4 Random Month generator and tex
 */
 import java.util.Scanner;
 
-public class RandomMonth.java {
+public class RandomMonth {
   public static void main(String[] args){
 
 //declare variables
-  int month;
+  double month;
 
 //random number generator
-  Math.random(month);
+  month = Math.random()*12;
+
+  System.out.println(month);
   }
 }
