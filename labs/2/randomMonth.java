@@ -10,7 +10,7 @@ This file contains the code to Lab 2: Problem 3.4 Random Month generator and tex
 */
 import java.util.Scanner;
 
-public class randomMonth.java {
+public class RandomMonth.java {
   public static void main(String[] args){
 
 //declare variables
