@@ -1,5 +1,5 @@
 /*
-file: numberDays.java
+file: NumberDays.java
 author: Cassie Schaaf
 course: CMPT 220
 assignment: lab 2-3.11
@@ -11,7 +11,7 @@ This file contains the code to lab 2 - problem 3.11 Find the number of days in a
 
 import java.util.Scanner;
 
-public class numberDays.java {
+public class NumberDays.java {
   public static void main(String[] args){
 
 //declare variables
