@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class RandomMonth {
   public static void main(String[] args){
-
+ 
 //declare variables
   double month;
 
