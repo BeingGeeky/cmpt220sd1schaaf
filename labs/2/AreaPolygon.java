@@ -1,5 +1,5 @@
 /*
-file: areaPolygon.java
+file: AreaPolygon.java
 author: Cassie Schaaf
 course: CMPT 220
 assignment: lab 2-4.5

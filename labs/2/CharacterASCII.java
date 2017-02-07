@@ -1,5 +1,5 @@
 /*
-file: charASCII.java
+file: CharacterASCII.java
 author: Cassie Schaaf
 course: CMPT 220
 assignment: lab 2-4.8
@@ -15,7 +15,7 @@ public class CharacterASCII{
   public static void main(String[] args){
 
   //Call for
-  System.out.println("Enter an ASCII code:");
+  System.out.println("Enter an ASCII code number");
 
   Scanner input = new Scanner(System.in);
 

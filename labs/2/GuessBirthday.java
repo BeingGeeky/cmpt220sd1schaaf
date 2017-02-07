@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class GuessBirthday{
   public static void main(String[] args){
 
+    //string sets
     String set1 =
       "1 3 5 7\n"+
       "9 11 13 15\n"+
@@ -90,6 +91,7 @@ public class GuessBirthday{
     System.out.println("\nEnter N for No and Y for Yes: ");
     answer=input.next();
 
+    //transfer to lowercase
     if (answer.equalsIgnoreCase("y")){
       day +=8;
       System.out.println(day);

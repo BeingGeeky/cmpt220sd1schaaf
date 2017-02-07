@@ -1,5 +1,5 @@
 /*
-file: grades2.java
+file: Grades2.java
 author: Cassie Schaaf, SD1, February 2
 course: CMPT 220
 assignment: lab 2

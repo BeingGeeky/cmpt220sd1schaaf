@@ -19,16 +19,19 @@ public class NumberDays {
     Scanner input = new Scanner(System.in);
     int month = input.nextInt();
     int year = input.nextInt();
+
     //int monthDays;
     String monthText;
 
-    boolean isLeapYear = (year % 4 ==0 && 100 !=0) || (year % 400 == 0);
+    //Find leap year
+    boolean isLeapYear = (year % 4 == 0 && 100 != 0) || (year % 400 == 0);
 
+    //Find year & days
     switch (month) {
       case 1: System.out.println("January " + year + "has 31 days");
         break;
       case 2:
-          if (isLeapYear==true){
+          if (isLeapYear == true){
             System.out.println("February " + year + " has 29 days");
           } else {
             System.out.println("February " + year + " has 28 days");
@@ -54,16 +57,7 @@ public class NumberDays {
         break;
       case 12: System.out.println("December " + year + " has 31 days");
         break;
-      default: monthText="Try another option";
+      default: monthText = "Try another option";
     }
-/*      case 2:
-        if (isLeapYear==true){
-          monthDays=29;
-        } else {
-          monthDays=28;
-        }
-*/
-
-//      System.out.println(monthText + " "+ monthDays);
   }
 }
