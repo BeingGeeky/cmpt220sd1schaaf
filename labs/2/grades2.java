@@ -10,7 +10,7 @@ This file contains the code to calculate the final course grade based on the CMP
 */
 import java.util.Scanner;
 
-public class grades2 {
+public class Grades2 {
   public static void main(String[] args) {
 
     //declare variables
@@ -39,12 +39,17 @@ public class grades2 {
     //Calculation of final course grade
     total = (homework * 0.4) + (project * 0.2) + (midterm * 0.2) + (finals * 0.2);
 
-    if (total < 60.0){letterGrade = "F";}
-    else if (total < 70.0){letterGrade = "D";}
-         else if (total < 80.0){letterGrade = "C";}
-              else if (total < 90.0){letterGrade = "B";}
-                   else if (total < 100.0){letterGrade = "A";}
-                        else {letterGrade = "ERROR: insufficient data";}
+    if (total < 60.0){
+      letterGrade = "F";
+    } else if (total < 70.0){
+      letterGrade = "D";
+    } else if (total < 80.0){
+      letterGrade = "C";
+    } else if (total < 90.0){
+      letterGrade = "B";
+    } else if (total < 100.0){
+      letterGrade = "A";
+    } else letterGrade = "ERROR: insufficient data";
 
     //display final course grade as a letter grade
     System.out.println("Final Grade for Software Development I: " + letterGrade);
