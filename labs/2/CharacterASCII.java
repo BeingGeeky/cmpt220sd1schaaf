@@ -23,6 +23,6 @@ public class CharacterASCII{
 
   char ch = (char)number;
 
-  System.out.println("The character for ASCII code"+ number + " is "+ ch);
+  System.out.println("The character for ASCII code "+ number + " is "+ ch + ".");
   }
 }
