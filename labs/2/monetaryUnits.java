@@ -44,7 +44,7 @@ public class MonetaryUnits{
     remainingAmount = remainingAmount % 5;
 
     // Find the number of pennies in the remaining amount
-    double numberOfPennies = remainingAmount;
+    double numberOfPennies = Math.ceil(remainingAmount);
 
     // Display results
     System.out.println("Your amount " + amount + " consists of");
@@ -53,7 +53,5 @@ public class MonetaryUnits{
     System.out.println("    " + numberOfDimes + " dimes");
     System.out.println("    " + numberOfNickels + " nickels");
     System.out.println("    " + numberOfPennies + " pennies");
-
-    //System.out.println(numberOfOneDollars);
   }
 }
