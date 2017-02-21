@@ -14,11 +14,15 @@ import java.util.Scanner;
 public class Driver_lab3 {
   public static void main(String[] args){
 
-    double x1=1.0;
-    double x2=2.0;
-    double y1=1.0;
-    double y2=2.0;
-    double p=2.0;
+    Scanner input = new Scanner(System.in);
+    double x1= input.nextDouble();
+    double x2=input.nextDouble();
+    double y1=input.nextDouble();
+    double y2=input.nextDouble();
+    double p=input.nextDouble();
+
+    int number = input.nextInt();
+
     double xValue= x1-x2;
     double yValue= y1-y2;
     double xSquared=Math.pow(xValue,p);
