@@ -14,14 +14,15 @@ import java.util.Scanner;
 public class LargeN {
   public static void main(String[] args){
 
-    int n = 0;
+    int  n = 0;
     int result=0;
-    while (result< 12000){
-      result = n*n;
+    while (result < 12000){
       n++;
-    }
-    //Print answer
-    System.out.println("The largest value of n is " + n);
+      result = (int) Math.pow(n,2);
+  //    result = (int) Math.sqrt(n);
+  //    n--;
+    }    //Print answer
+    System.out.println("The largest value of n is " + (n-1));
 
   }
 }

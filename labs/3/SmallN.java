@@ -14,9 +14,14 @@ import java.util.Scanner;
 public class SmallN {
   public static void main(String[] args){
 
-
+    int n = 0;
+    int result=0;
+    while (result > 12000){
+      result = n*n;
+      n++;
+    }
     //Print answer
-    System.out.println("The area of the pentagon is " + area);
+    System.out.println("The largest value of n is " + n);
 
   }
 }
