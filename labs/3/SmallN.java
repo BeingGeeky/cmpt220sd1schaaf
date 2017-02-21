@@ -16,8 +16,8 @@ public class SmallN {
 
     int n = 0;
     int result=0;
-    while (result > 12000){
-      result = n*n;
+    while (result <= 12000){
+      result = (int)Math.pow(n,2);
       n++;
     }
     //Print answer
