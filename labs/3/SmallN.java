@@ -21,7 +21,7 @@ public class SmallN {
       n++;
     }
     //Print answer
-    System.out.println("The largest value of n is " + n);
+    System.out.println("The smallest value of n is " + (n-1));
 
   }
 }
