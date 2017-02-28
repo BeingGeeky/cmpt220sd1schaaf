@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class Driver_lab3 {
   public static void main(String[] args){
 
-   //Scanner declarations
+    //Scanner declarations
     Scanner input = new Scanner(System.in);
     double x1= input.nextDouble();
     double y1=input.nextDouble();
@@ -22,10 +22,10 @@ public class Driver_lab3 {
     double y2=input.nextDouble();
     double p=input.nextDouble();
 
-   //Formula
+    //Formula
     double answer = Math.pow(((Math.abs((Math.pow((x1-x2),p)))) + (Math.abs((Math.pow((y1-y2),p))))),(1/p));
 
-   //Answer print
-   System.out.printf("Amount = %10.10f", answer);
+    //Answer print
+    System.out.printf("Amount = %.10f", answer);
   }
 }

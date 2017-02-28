@@ -12,28 +12,30 @@ This file contains the code to
 import java.util.Scanner;
 
 public class SumDigits {
+
   public static void main(String[] args){
+    //Print instructions
+    System.out.println("Enter an integer");
+
+    //Input scanner
     Scanner input = new Scanner(System.in);
-     long num=input.nextLong();
-     long answer = sumDigits(num);
+    long num=input.nextLong();
+
+    //Run method & Print answer
+    System.out.println("The sum of the digits is " + sumDigits(num) + ".");
   }
-}
 
-public static int sumDigits(long n){
-  System.out.println("Enter a number between 0 and 1000: ");
-//  number = (int)input.nextLong();
-  while(num >= 0){
-  //break down number into single digits
-  long digitOne = num % 10;
-  long numberOne = num / 10;
-  long digitTwo = numberOne % 10;
-  long numberTwo = numberOne / 10;
-  long digitThree = numberTwo % 10;
-  long numberThree = numberTwo / 10;
+  //Method
+  public static long sumDigits(long n){
+    long sum = 0;
+    while(n > 0){
 
-  //add single digits together
-  long total = digitOne + digitTwo + digitThree;
-   return total;
-  //return single digit value
-  //System.out.println("The sum of the digits is: " + total);  }
+    //break down number into single digits
+    long number = n % 10;
+    sum = sum + number;
+    n = n/10;
+    }
+    
+    return sum;
+  }
 }
