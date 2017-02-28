@@ -19,23 +19,39 @@ public class PalInt {
 
     //Input scanner
     Scanner input = new Scanner(System.in);
-    long num=input.nextLong();
+    int n=input.nextInt();
+    System.out.println(reverse(n));
 
     //Run method & Print answer
-    System.out.println("The sum of the digits is " + sumDigits(num) + ".");
+//    System.out.println("The palindrome " + reverse(number) + ".");
   }
 
   //Method
-  public static long sumDigits(long n){
-    long sum = 0;
-    while(n > 0){
+  public static int reverse (int number){
+
+    int pal=0;
+    while(number > 0){
 
     //break down number into single digits
-    long number = n % 10;
-    sum = sum + number;
-    n = n/10;
-    }
+    int digit = number % 10;
+    int answer=0;
+    number = number/10;
+  //  System.out.println(digit);
 
-    return sum;
+      if (pal <= 10){
+        pal = pal + digit;
+      } else {
+        pal = digit * 10;
+      }
+    }
+    return pal;
   }
+
+/*  public static int reverse(int number){
+
+  }
+
+  public static boolean isPalindrome(int number){
+
+  }*/
 }
