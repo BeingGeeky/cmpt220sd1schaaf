@@ -23,28 +23,30 @@ public class PalInt {
     System.out.println(reverse(n));
 
     //Run method & Print answer
-//    System.out.println("The palindrome " + reverse(number) + ".");
+    //System.out.println("The palindrome " + result + ".");
   }
 
   //Method
   public static int reverse (int number){
 
     int pal=0;
-    while(number > 0){
+    int digit=0;
+    while(number >= 0){
 
     //break down number into single digits
-    int digit = number % 10;
+    digit = number % 10;
     int answer=0;
     number = number/10;
-  //  System.out.println(digit);
-
-      if (pal <= 10){
+    System.out.print(digit);
+/*
+      if (pal < 10){
         pal = pal + digit;
       } else {
         pal = digit * 10;
       }
+      */
     }
-    return pal;
+    return digit;
   }
 
 /*  public static int reverse(int number){

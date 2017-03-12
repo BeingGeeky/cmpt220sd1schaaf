@@ -15,28 +15,32 @@ public class Driver_lab3 {
   public static void main(String[] args){
 
     //Scanner declarations
-    Scanner input = new Scanner(System.in);
+    @SuppressWarnings("resource")
+	Scanner input = new Scanner(System.in);
     //loop strts
-    double x1;
-    x1 = input.nextDouble();
+
+    double n = input.nextDouble();
 //    x1 = input.nextDouble();
     double answer;
-
+    double x1;
+    x1 = n;
+    
     while (x1>=0){
-    if (x1==0){
-    } else{
+      if (x1>0){
   //    double answer;
+       x1 = input.nextDouble();
       double y1=input.nextDouble();
       double x2=input.nextDouble();
       double y2=input.nextDouble();
       double p=input.nextDouble();
 
     //Formula
-    answer = Math.pow(((Math.abs((Math.pow((x1-x2),p)))) + (Math.abs((Math.pow((y1-y2),p))))),(1/p));
+      answer = Math.pow(((Math.abs((Math.pow((x1-x2),p)))) + (Math.abs((Math.pow((y1-y2),p))))),(1/p));
 
     //Answer print
     //System.out.printf("%.10f", x1);
-    System.out.println(x1);
+      System.out.printf("%.10f",answer);
+    } else {
       }
     }
   }
