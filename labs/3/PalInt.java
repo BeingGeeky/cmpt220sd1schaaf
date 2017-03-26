@@ -19,41 +19,52 @@ public class PalInt {
 
     //Input scanner
     Scanner input = new Scanner(System.in);
-    int n=input.nextInt();
-    System.out.println(reverse(n));
+    //pal becomes the input number
+    int pal=input.nextInt();
+    //pal is inserted into the method
+    int answer = reverse(pal);
+    System.out.println(reverse(answer));
 
     //Run method & Print answer
     //System.out.println("The palindrome " + result + ".");
   }
 
-  //Method
+  //Method pal
   public static int reverse (int number){
-
-    int pal=0;
+//declare digit
     int digit=0;
-    while(number >= 0){
+    int answer=0;
+    //while loop
+    while(number > 0){//543
 
     //break down number into single digits
-    digit = number % 10;
-    int answer=0;
-    number = number/10;
-    System.out.print(digit);
-/*
-      if (pal < 10){
-        pal = pal + digit;
+    //digit equals pal/input remainder 10
+    //this breaks down # into single digits
+    digit = number % 10; //3-4
+    //number gives the remaining number to process through the loop
+    number = number/10;//54-5
+    //answer gives the previous number;
+    answer = digit * 10;//30-40
+    //prints the digit pulled out
+    answer = answer + digit;
+    System.out.print(answer);
+    //if the remaining # is less than 10/the last single digit of number...
+      if (number < 10){
+   	 //take that single digit and adds it to the previous number  
+        answer = answer + digit;
+        //System.out.print(digit);
       } else {
-        pal = digit * 10;
+    //number = digit * 10;
+        System.out.println("Answer: "+answer + " ");
+        System.out.println("Digit: "+digit + " ");
+        System.out.println("Number: "+number+" ");
       }
-      */
     }
-    return digit;
-  }
-
-/*  public static int reverse(int number){
+    return answer;
 
   }
 
-  public static boolean isPalindrome(int number){
+ /* public static boolean isPalindrome(int number){
 
   }*/
 }
