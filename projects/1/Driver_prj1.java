@@ -20,16 +20,16 @@ public class Driver_prj1 {
      * 
      */
     //ask for first array length
-    int firstArrLength = 0;
+    int firstArrLength;
     System.out.println("Enter the length of the first array:");
-    int who=input.nextInt();
+    firstArrLength=input.nextInt();
     //declare array
     int[] first = new int[firstArrLength];
     
     //ask for second array length
-    int secondArrLength = 0;
+    int secondArrLength;
     System.out.println("Enter the length of the second array:");
-    int what=input.nextInt();
+    secondArrLength=input.nextInt();
     
     //declare array
     int[] second = new int[secondArrLength];
@@ -40,14 +40,18 @@ public class Driver_prj1 {
       first[a]=input.nextInt();
     }
     
- //   System.out.println("You entered "+first[0]);
+    int p=first[0];
+    System.out.println("You entered "+p);
     
-    //input & fill second array
- //   System.out.println("Enter the "+secondArrLength+" values of the second array:");
- //   for (int a=0;a<secondArrLength;a++){
- //   second[a]=input.nextInt();
-  //  }
- /*   
+    //input & fill first array
+    System.out.println("Enter the "+secondArrLength+" values of the second array:");
+    for (int a=0;a<secondArrLength;a++){
+      second[a]=input.nextInt();
+    }
+    
+    int q=second[0];
+    System.out.println("You entered "+q);
+  
     //calculate size
     int resultLength = (first.length + second.length)-1;
     
@@ -63,19 +67,14 @@ public class Driver_prj1 {
     //formula for result
     result[idx] = (first[idx-s]*second[s]);
    
-//Print results to test
-  //  System.out.println(i);
-    System.out.println("F"+(second[0])+"   E"+(first[0])+"   "+resultLength);
-    */
-    }
-  }
+    //Print results to test
+    System.out.println("result length "+resultLength);
 /*
-  public static double[] convolveVectors(double[] vFirst, double[] vSecond) {
+  public static double[] convolveVecs(double[] vFirst, double[] vSecond) {
     double[] vResult = new double[(vFirst.length + vSecond.length) - 1];
     // write your code here
 
     return vResult;  
- */
-//  }
-
-//}
+*/
+   }
+}
