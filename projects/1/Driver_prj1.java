@@ -42,18 +42,19 @@ public class Driver_prj1 {
     int[] result = new int[resultLength];
     
     //declare array position variable
-    int idx=0;   
+    int idx;   
 
     //declare shift value;
     int s=0;
     
     //formula for result
-  //  if(idx<resultlength; ;idx++){
-  //  result[n] = sum(first[n-s]*second[s])
+    for (idx=0;idx < resultLength;idx++){
+    result[idx] = (first[idx-s]*second[s]);
+    }
    
 //Print results to test
   //  System.out.println(i);
-    System.out.println("F"+second[0]+"   E"+first[0]);
+    System.out.println("F"+(second[0])+"   E"+(first[0])+"   "+resultLength);
     
     }
   }
