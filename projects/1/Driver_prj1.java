@@ -25,31 +25,35 @@ public class Driver_prj1 {
     //input & fill "first" array
     int firstInput=input.nextInt();
     //***loop to fill
+    first[0]=firstInput;
     
     //declare array 2
     int[]second = new int[1];
-    second[0]= bill;
     
-    
-    
-    //declare result
-  //  int[] result = new int[0];
-    
-    //declare array position variable
- //   int idx=0;
+    //input & fill "second" array
+    int secondInput=input.nextInt();
+    //***loop to fill
+    second[0]=secondInput;
     
     //calculate size
- //   int resultLength = (first.length + second.length)-1;
+    int resultLength = (first.length + second.length)-1;
     
+    //declare result
+    int[] result = new int[resultLength];
+    
+    //declare array position variable
+    int idx=0;   
+
     //declare shift value;
- //   int s=0;
+    int s=0;
     
     //formula for result
- //   if(idx<resultlength; ;idx++){
- //   result[n] = sum(first[n-s]*second[s])
+  //  if(idx<resultlength; ;idx++){
+  //  result[n] = sum(first[n-s]*second[s])
    
+//Print results to test
   //  System.out.println(i);
-    System.out.println(second[0]*2);
+    System.out.println("F"+second[0]+"   E"+first[0]);
     
     }
   }
