@@ -20,29 +20,36 @@ public class Driver_prj1 {
      * 
      */
     //declare array
-    int Array first = new int[1 1 1];
+    int[] first = new int[3];
+    
+    //input & fill "first" array
+    int firstInput=input.nextInt();
+    //***loop to fill
     
     //declare array 2
-    int Array second = new int[1 0 1];
+    int[]second = new int[1];
+    second[0]= bill;
+    
+    
     
     //declare result
-    int Array result[] = new int[];
+  //  int[] result = new int[0];
     
     //declare array position variable
-    int idx=0;
+ //   int idx=0;
     
     //calculate size
-    int resultLength = (first.length + second.length)-1;
+ //   int resultLength = (first.length + second.length)-1;
     
     //declare shift value;
-    int s=0;
+ //   int s=0;
     
     //formula for result
-    if(idx<resultlength; ;idx++){
-    result[n] = sum(first[n-s]*second[s])
+ //   if(idx<resultlength; ;idx++){
+ //   result[n] = sum(first[n-s]*second[s])
    
-    System.out.println(n);
-    System.out.println(result[]);
+  //  System.out.println(i);
+    System.out.println(second[0]*2);
     
     }
   }
@@ -53,6 +60,6 @@ public class Driver_prj1 {
 
     return vResult;  
  */
-  }
+//  }
 
-}
+//}
