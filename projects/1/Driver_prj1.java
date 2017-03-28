@@ -19,22 +19,35 @@ public class Driver_prj1 {
      * send to standard output the result of the convolution
      * 
      */
+    //ask for first array length
+    int firstArrLength = 0;
+    System.out.println("Enter the length of the first array:");
+    int who=input.nextInt();
     //declare array
-    int[] first = new int[3];
+    int[] first = new int[firstArrLength];
     
-    //input & fill "first" array
-    int firstInput=input.nextInt();
-    //***loop to fill
-    first[0]=firstInput;
+    //ask for second array length
+    int secondArrLength = 0;
+    System.out.println("Enter the length of the second array:");
+    int what=input.nextInt();
     
-    //declare array 2
-    int[]second = new int[1];
+    //declare array
+    int[] second = new int[secondArrLength];
     
-    //input & fill "second" array
-    int secondInput=input.nextInt();
-    //***loop to fill
-    second[0]=secondInput;
+    //input & fill first array
+    System.out.println("Enter the "+firstArrLength+" values of the first array:");
+    for (int a=0;a<firstArrLength;a++){
+      first[a]=input.nextInt();
+    }
     
+ //   System.out.println("You entered "+first[0]);
+    
+    //input & fill second array
+ //   System.out.println("Enter the "+secondArrLength+" values of the second array:");
+ //   for (int a=0;a<secondArrLength;a++){
+ //   second[a]=input.nextInt();
+  //  }
+ /*   
     //calculate size
     int resultLength = (first.length + second.length)-1;
     
@@ -42,20 +55,18 @@ public class Driver_prj1 {
     int[] result = new int[resultLength];
     
     //declare array position variable
-    int idx;   
+    int idx=0;   
 
     //declare shift value;
     int s=0;
     
     //formula for result
-    for (idx=0;idx < resultLength;idx++){
     result[idx] = (first[idx-s]*second[s]);
-    }
    
 //Print results to test
   //  System.out.println(i);
     System.out.println("F"+(second[0])+"   E"+(first[0])+"   "+resultLength);
-    
+    */
     }
   }
 /*
