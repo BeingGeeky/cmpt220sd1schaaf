@@ -64,11 +64,26 @@ public class Driver_prj1 {
     //declare shift value;
     int s=0;
     
+   //determine which array is largest
+    if (firstArrLength<secondArrLength){
+    	for (int n=0;n<secondArrLength;n++){
+    	  result[idx] = (first[idx-s]*second[s]);
+    	  s++;
+    	}
+    } else {
+    	for (int n=0;n<firstArrLength;n++){
+    	   result[idx] = (first[idx-s]*second[s]);
+    	   idx++;
+    	}
+    }
+    
+ //   while (idx)
     //formula for result
-    result[idx] = (first[idx-s]*second[s]);
+ //   result[idx] = (first[idx-s]*second[s]);
    
     //Print results to test
     System.out.println("result length "+resultLength);
+
 /*
   public static double[] convolveVecs(double[] vFirst, double[] vSecond) {
     double[] vResult = new double[(vFirst.length + vSecond.length) - 1];
