@@ -31,16 +31,18 @@ public class CelFah {
 //	  String tempType;
 //	  tempType = input.nextLine();
 //	  String tempTypeCase = tempType.toLowerCase();
-	  System.out.println(tempInput);
+	  System.out.println(tempType);
 //	  System.out.println(tempType);
 	  System.out.println(temp);
 //	  System.out.println(newTemp);
-/*	  if (tempType=='f'){
+	  if (tempType=='0'){
 		   celsiusToFahrenheit(temp);
-	  } else {
+	  } else if (tempType=='1'){
 		   fahrenheitToCelsius(temp);
-	  }
-	  System.out.println("The new temperature is "+ newTemp);
+	  } else {
+      System.out.println("Error");
+    }
+	//  System.out.println("The new temperature is "+ newTemp);
   }
   public static void celsiusToFahrenheit(double celsius){
 	    //fahrenheit calculation
@@ -53,6 +55,6 @@ public class CelFah {
 	    double celsius = (5.0 / 9) * (fahrenheit-32);
 	    System.out.println("Fahrenheit is "+celsius+" degrees Celsius");
 //	    return celsius;
- */
+
   }
  }

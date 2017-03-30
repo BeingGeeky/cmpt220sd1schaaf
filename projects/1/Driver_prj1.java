@@ -40,17 +40,11 @@ public class Driver_prj1 {
       first[a]=input.nextInt();
     }
     
-    int p=first[0];
-    System.out.println("You entered "+p);
-    
     //input & fill first array
     System.out.println("Enter the "+secondArrLength+" values of the second array:");
     for (int a=0;a<secondArrLength;a++){
       second[a]=input.nextInt();
     }
-    
-    int q=second[0];
-    System.out.println("You entered "+q);
   
     //calculate size
     int resultLength = (first.length + second.length)-1;
@@ -58,32 +52,19 @@ public class Driver_prj1 {
     //declare result
     int[] result = new int[resultLength];
     
-    //declare array position variable
-    int idx=0;   
-
-    //declare shift value;
-    int s=0;
-    
    //determine which array is largest
-    if (firstArrLength<secondArrLength){
-    	for (int n=0;n<secondArrLength;n++){
-    	  result[idx] = (first[idx-s]*second[s]);
-    	  s++;
-    	}
-    } else {
-    	for (int n=0;n<firstArrLength;n++){
-    	   result[idx] = (first[idx-s]*second[s]);
-    	   idx++;
+    for (int idx=0; idx<result.length;idx++){
+    	
+    	for (int s=0;s<second.length;s++){
+    		if ( ((idx-s)<first.length) && ((idx-s)>=0) ){
+    			result[idx] = (first[idx-s]*second[s]);
+    		}
     	}
     }
-    
- //   while (idx)
-    //formula for result
- //   result[idx] = (first[idx-s]*second[s]);
-   
     //Print results to test
-    System.out.println("result length "+resultLength);
-
+    for (int i=0; i < result.length; i++){
+    System.out.print(result[i] +" ");
+    }
 /*
   public static double[] convolveVecs(double[] vFirst, double[] vSecond) {
     double[] vResult = new double[(vFirst.length + vSecond.length) - 1];

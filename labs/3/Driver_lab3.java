@@ -19,29 +19,32 @@ public class Driver_lab3 {
 	Scanner input = new Scanner(System.in);
     //loop strts
 
-    double n = input.nextDouble();
+    //double n = input.nextDouble();
 //    x1 = input.nextDouble();
     double answer;
-    double x1;
-    x1 = n;
-    
-    while (x1>=0){
-      if (x1>0){
+//    double x1;
+//    x1 = n;
+
+    while (true){
+      double x1 = input.nextDouble();
+
+      if (x1==0){
+        break;
+      }
+
   //    double answer;
-       x1 = input.nextDouble();
       double y1=input.nextDouble();
       double x2=input.nextDouble();
       double y2=input.nextDouble();
       double p=input.nextDouble();
 
     //Formula
-      answer = Math.pow(((Math.abs((Math.pow((x1-x2),p)))) + (Math.abs((Math.pow((y1-y2),p))))),(1/p));
+      answer = Math.pow(Math.pow(Math.abs(x1-x2),p) + Math.pow(Math.abs(y1-y2),p),(1/p));
 
     //Answer print
     //System.out.printf("%.10f", x1);
-      System.out.printf("%.10f",answer);
-    } else {
-      }
+      System.out.printf("%.10f\n",answer);
+
     }
   }
 }
