@@ -65,7 +65,7 @@ public class Driver_prj1 {
     for (int i=0; i < result.length; i++){
     System.out.print(result[i] +" ");
     }
-/*
+
   public static double[] convolveVecs(double[] vFirst, double[] vSecond) {
     double[] vResult = new double[(vFirst.length + vSecond.length) - 1];
     // write your code here
