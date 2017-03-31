@@ -16,45 +16,31 @@ import java.util.Scanner;
 
 public class CelFah {
   public static void main(String[] args){
-	  /*user enters degrees
-	  user determines the temp entered
-	  if string is F or f, run fahToCel
-	  if string is C or c, run celToFah
-	  */
-	  System.out.println("Enter the temp and which type of temperature you would like to convert to: Enter '0' for Celcius or '1' for Fahrenheit and the degrees of temperature in decimal format.");
-	  Scanner input = new Scanner(System.in);
-	  int tempType = input.nextInt();
-//	  String tempInput = input.nextLine();
-//	  char tempType = tempInput.charAt(0);
-	  double temp = input.nextDouble();
-	  double newTemp=0;
-//	  String tempType;
-//	  tempType = input.nextLine();
-//	  String tempTypeCase = tempType.toLowerCase();
-	  System.out.println(tempType);
-//	  System.out.println(tempType);
-	  System.out.println(temp);
-//	  System.out.println(newTemp);
-	  if (tempType=='0'){
-		   celsiusToFahrenheit(temp);
-	  } else if (tempType=='1'){
-		   fahrenheitToCelsius(temp);
-	  } else {
+    Scanner input = new Scanner(System.in);
+
+	System.out.println("Enter the temp and which type of temperature you would like to convert to: Enter '0' to convert Celcius to Fahrenheit or '1' to convert Fahrenheit to Celcius and the degrees of temperature in decimal format.");
+	int tempType = input.nextInt();
+	double temp = input.nextDouble();
+	if (tempType==0){
+	  celsiusToFahrenheit(temp);
+	} else if (tempType==1){
+      fahrenheitToCelsius(temp);
+	} else {
       System.out.println("Error");
     }
 	//  System.out.println("The new temperature is "+ newTemp);
   }
-  public static void celsiusToFahrenheit(double celsius){
-	    //fahrenheit calculation
-	    double fahrenheit = (1.8 * celsius) + 32;
-	    System.out.println("Celsius is " + fahrenheit + " degrees Fahrenheit");
-//	    double newTemp = fahrenheit;
-//	    return fahrenheit;
+  public static double celsiusToFahrenheit(double celsius){
+	//fahrenheit calculation
+	double fahrenheit = (1.8 * celsius) + 32;
+	System.out.println("Celsius is " + fahrenheit + " degrees Fahrenheit");
+	double newTemp = fahrenheit;
+	return fahrenheit;
   }
-  public static void fahrenheitToCelsius(double fahrenheit){
-	    double celsius = (5.0 / 9) * (fahrenheit-32);
-	    System.out.println("Fahrenheit is "+celsius+" degrees Celsius");
-//	    return celsius;
-
+  
+  public static double fahrenheitToCelsius(double fahrenheit){
+	double celsius = (5.0 / 9) * (fahrenheit-32);
+	System.out.println("Fahrenheit is "+celsius+" degrees Celsius");
+	return celsius;
   }
- }
+}
