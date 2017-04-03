@@ -31,33 +31,44 @@ public class Prj2_schaaf {
      - user create an "account" of name, username, password, & details
      - save favorite ideas
  */
+    System.out.println("Would you like a random idea or would you like to select you ideas? Enter 0 for random or 1 to make a selection.");
+    int select = input.nextInt();
+    int list = 0;
+    int idea = 0;
+    int item = 0;
+    String result;
+
+	//Selections 
+	String[][] ideas = {
+	      		/*lists*/ 
+	      		/*0 Mediums*/ {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
+	            /*1 Jungle*/ {"Canopy",   "Monkeys",   "Snakes",      "Jaguar",     "Insects"},
+	      		/*2 Lanscape*/ {"Ocean",  "Sunset",    "Forest",      "Mountains",  "Beach"},
+	      		/*3 Forest*/ {"Tree",     "Stream",    "Leaves",      "Creatures",  ""},
+	      		/*4 Country*/ {"Ireland", "Egypt",     "China",       "India",      "Russia"},
+	      		/*5 Insect*/ {"Spider",   "Centipede", "Beetle",      "Fly",        "Roach"},
+	      		};
     
     if (select==0){
-    	
+      list = (int)Math.random();
+      item = (int)Math.random();    	
+      System.out.println ("Try this: " + ideas[list][item]);
+    } else if (select==1){
+      System.out.println("Enter a number between to select a list:\n 0 for Medium");
+      list = input.nextInt();
+      System.out.println("Enter a number to select an item:");
+      item = input.nextInt();
+      System.out.println("Try this: "+ ideas[list][item]);
     } else {
-    	
+      System.out.println("Thanks for playing!");
     }
 
-    System.out.println("Try this:" + result);
-    }
-
-  public static String[] convolveVecs(int[] first, int [] second) {
-   
-	
-	//Selections 
-	ideas = new String[][] [ // ,
-	      		/*lists*/ 
-	      		/*0 Mediums*/ ["Pastel","Oil","Watercolor","Acrylic","Colored Pencils","Charcoal"],
-	            /*1 Jungle*/ ["Canopy","Monkeys","Snakes","Jaguar",""],
-	      		/*2 Lanscape*/ ["Ocean","Sunset","Forest","Mountains",""],
-	      		/*3 Forest*/ ["Tree","Stream","Leaves","","",""],
-	      		/*4 Country*/ ["Ireland","Egypt","China","India","Russia"],
-	      		/*5 Insect*/ ["Spider","Centipede","","",""],
-	]
-    
-    int randomNum = int Math.random();
-	System.out.print(randomNum);
+    result= ideas[list][item];
+  }
+/*
+  public static String[] generateIdeas(int[] list, int [] item) {
     return result;  
-
    }
+*/
+
 }
