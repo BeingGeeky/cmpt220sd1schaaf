@@ -40,19 +40,21 @@ public class Prj2_schaaf {
 
 	//Selections 
 	String[][] ideas = {
-	      		/*lists*/ 
-	      		/*0 Mediums*/ {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
-	            /*1 Jungle*/ {"Canopy",   "Monkeys",   "Snakes",      "Jaguar",     "Insects"},
-	      		/*2 Lanscape*/ {"Ocean",  "Sunset",    "Forest",      "Mountains",  "Beach"},
-	      		/*3 Forest*/ {"Tree",     "Stream",    "Leaves",      "Creatures",  ""},
-	      		/*4 Country*/ {"Ireland", "Egypt",     "China",       "India",      "Russia"},
-	      		/*5 Insect*/ {"Spider",   "Centipede", "Beetle",      "Fly",        "Roach"},
+	      		/*lists                    1         2            3              4             5 */ 
+	      		/*0 Mediums*/            {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
+	            /*1 Jungle*/             {"Canopy",  "Monkeys",   "Snakes",      "Jaguar",     "Insects"},
+	      		/*2 Lanscape*/           {"Ocean",   "Sunset",    "Forest",      "Mountains",  "Beach"},
+	      		/*3 Forest*/             {"Tree",    "Stream",    "Leaves",      "Creatures",  "Deer"},
+	      		/*4 Country*/            {"Ireland", "Egypt",     "China",       "India",      "Russia"},
+	      		/*5 Insect*/             {"Spider",  "Centipede", "Beetle",      "Fly",        "Roach"},
+	      		/*6 Woodland Creatures*/ {"Squirrel","Hedgehog",  "Rabbit",      "Deer",       "Bear"},
 	      		};
     
     if (select==0){
       list = (int)Math.random();
-      item = (int)Math.random();    	
-      System.out.println ("Try this: " + ideas[list][item]);
+      item = (int)Math.random();  
+      
+      System.out.println ("Try this: " + randomIdeas(list, item));
     } else if (select==1){
       System.out.println("Enter a number between to select a list:\n 0 for Medium");
       list = input.nextInt();
@@ -63,12 +65,15 @@ public class Prj2_schaaf {
       System.out.println("Thanks for playing!");
     }
 
-    result= ideas[list][item];
   }
-/*
-  public static String[] generateIdeas(int[] list, int [] item) {
+
+  public static String[] randomIdeas(int[] list, int [] item) {
+      result= ideas[list][item];
+
     return result;  
    }
-*/
+  
+ 
+
 
 }
