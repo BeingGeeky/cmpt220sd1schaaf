@@ -39,38 +39,43 @@ public class Prj2_schaaf {
     String result;
 
 	//Selections 
-	String[][] ideas = {
-	      		/*lists                    1         2            3              4             5 */ 
-	      		/*0 Mediums*/            {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
-	            /*1 Jungle*/             {"Canopy",  "Monkeys",   "Snakes",      "Jaguar",     "Insects"},
-	      		/*2 Lanscape*/           {"Ocean",   "Sunset",    "Forest",      "Mountains",  "Beach"},
-	      		/*3 Forest*/             {"Tree",    "Stream",    "Leaves",      "Creatures",  "Deer"},
-	      		/*4 Country*/            {"Ireland", "Egypt",     "China",       "India",      "Russia"},
-	      		/*5 Insect*/             {"Spider",  "Centipede", "Beetle",      "Fly",        "Roach"},
-	      		/*6 Woodland Creatures*/ {"Squirrel","Hedgehog",  "Rabbit",      "Deer",       "Bear"},
-	      		};
+    String[][] ideas = {                   /*items*/
+      		/*lists                    1         2            3              4             5 */ 
+      		/*0 Mediums*/            {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
+            /*1 Jungle*/             {"Canopy",  "Monkeys",   "Snakes",      "Jaguar",     "Insects"},
+      		/*2 Lanscape*/           {"Ocean",   "Sunset",    "Forest",      "Mountains",  "Beach"},
+      		/*3 Forest*/             {"Tree",    "Stream",    "Leaves",      "Creatures",  "Deer"},
+      		/*4 Country*/            {"Ireland", "Egypt",     "China",       "India",      "Russia"},
+      		/*5 Insect*/             {"Spider",  "Centipede", "Beetle",      "Fly",        "Roach"},
+      		/*6 Woodland Creatures*/ {"Squirrel","Hedgehog",  "Rabbit",      "Deer",       "Bear"},
+      		};
     
     if (select==0){
-      list = (int)Math.random();
-      item = (int)Math.random();  
-      
-      System.out.println ("Try this: " + randomIdeas(list, item));
+
+      int rangeList = ((ideas.length)+1);
+      int rangeItem = ((ideas[list].length)+1);
+      list = (((int)Math.random())*rangeList);
+      item = (((int)Math.random())*rangeItem);
+      System.out.println ("Try this: " + ideas[list][item]/*randomIdeas(list, item)*/);
     } else if (select==1){
       System.out.println("Enter a number between to select a list:\n 0 for Medium");
       list = input.nextInt();
       System.out.println("Enter a number to select an item:");
       item = input.nextInt();
-      System.out.println("Try this: "+ ideas[list][item]);
+      System.out.println("Try this: "+ ideas[list][item] /*randomIdeas(list, item)*/);
     } else {
       System.out.println("Thanks for playing!");
     }
 
-  }
+ // }
 
-  public static String[] randomIdeas(int[] list, int [] item) {
-      result= ideas[list][item];
+  //public static String[] randomIdeas(int list, int item) {
+ 
 
-    return result;  
+   // String result;
+  //  result = ideas[list][item];
+
+ //   return result;  
    }
   
  
