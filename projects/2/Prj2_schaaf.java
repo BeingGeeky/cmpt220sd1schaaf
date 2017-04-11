@@ -91,7 +91,7 @@ public class Prj2_schaaf {
   //Home screen/Front page has 3rd option to randomly draw a saved idea
   //
  
-//PHASE 4
+//PHASE 4 ** IF TIME **
     //create an account object
     //object has:
       //name
