@@ -31,14 +31,17 @@ public class Prj2_schaaf {
      - user create an "account" of name, username, password, & details
      - save favorite ideas
  */
+    
+//display directions
     System.out.println("Would you like a random idea or would you like to select you ideas? Enter 0 for random or 1 to make a selection.");
+//make selection 
+//APP: would be a button
     int select = input.nextInt();
     int list = 0;
     int idea = 0;
     int item = 0;
     String result;
-
-	//Selections 
+//Set up selection arrays 
     String[][] ideas = {                   /*items*/
       		/*lists                    1         2            3              4             5 */ 
       		/*0 Mediums*/            {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
@@ -49,14 +52,17 @@ public class Prj2_schaaf {
       		/*5 Insect*/             {"Spider",  "Centipede", "Beetle",      "Fly",        "Roach"},
       		/*6 Woodland Creatures*/ {"Squirrel","Hedgehog",  "Rabbit",      "Deer",       "Bear"},
       		};
-    
+//use directions to display either a completely random idea...
+//APP: 2 buttons
+    //APP: button #1
     if (select==0){
-
-      int rangeList = ((ideas.length)+1);
-      int rangeItem = ((ideas[list].length)+1);
-      list = (((int)Math.random())*rangeList);
-      item = (((int)Math.random())*rangeItem);
+      int ideasLength = ideas.length;
+      list = (((int)Math.random())*ideas.length);
+      item = (((int)Math.random())*5);
+      System.out.print("list "+ list+ " item "+ item);
       System.out.println ("Try this: " + ideas[list][item]/*randomIdeas(list, item)*/);
+//..or a more specific selection  
+    //APP: Drop down lists, then button #2 to submit
     } else if (select==1){
       System.out.println("Enter a number between to select a list:\n 0 for Medium");
       list = input.nextInt();
@@ -66,16 +72,39 @@ public class Prj2_schaaf {
     } else {
       System.out.println("Thanks for playing!");
     }
-
- // }
-
-  //public static String[] randomIdeas(int list, int item) {
+//display the result to the screen
  
+//PHASE 2
+  //break idea draw into randomIdeas method and selectedIdeas method
+  //Add option to front/home page to select 1-3 idea
+  //If/Else statements
+    //totally random or selected
+      //if 1 idea, run randomIdea/selectedIdea 1 time
+      //if 2 ideas, run randomIdea/selectedIdea 2 times
+      //if 3 ideas, run randomIdea/selectedIdea 3 times
+      //display all results at once
+    
+//PHASE 3
+  //set up empty SAVE array
+  //allow user to save idea to SAVE array
+  //APP: user click button to save to empty array
+  //Home screen/Front page has 3rd option to randomly draw a saved idea
+  //
+ 
+//PHASE 4
+    //create an account object
+    //object has:
+      //name
+      //email
+        //email verfication method
+      //password
+        //password verification method
+    
+    
+ /* Methods go here
+  * 
+  */
 
-   // String result;
-  //  result = ideas[list][item];
-
- //   return result;  
    }
   
  
