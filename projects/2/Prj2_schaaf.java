@@ -57,23 +57,22 @@ public class Prj2_schaaf {
     //APP: button #1
     if (select==0){
       int ideasLength = ideas.length;
-      list = (((int)Math.random())*ideas.length);
-      item = (((int)Math.random())*5);
-      System.out.print("list "+ list+ " item "+ item);
-      System.out.println ("Try this: " + ideas[list][item]/*randomIdeas(list, item)*/);
+      int randomIdea = (int)(Math.random() * ideasLength);
+      item = (int)(Math.random() * ideas[randomIdea].length);
+      System.out.println ("Try this: " + ideas[randomIdea][item]);
 //..or a more specific selection  
     //APP: Drop down lists, then button #2 to submit
     } else if (select==1){
-      System.out.println("Enter a number between to select a list:\n 0 for Medium");
+      System.out.println("Enter a number between to select a list:\n 0-Medium \n 1-Jungle \n 2-Landscape \n 3-Forest \n 4-Country \n 5-Insect \n 6-Woodland Creature");
       list = input.nextInt();
-      System.out.println("Enter a number to select an item:");
-      item = input.nextInt();
+      item = (int)(Math.random() * ideas[list].length);
       System.out.println("Try this: "+ ideas[list][item] /*randomIdeas(list, item)*/);
     } else {
-      System.out.println("Thanks for playing!");
+      System.out.println("Thanks for playing! Try again.");
     }
 //display the result to the screen
- 
+//PHASE 1: COMPLETE
+    
 //PHASE 2
   //break idea draw into randomIdeas method and selectedIdeas method
   //Add option to front/home page to select 1-3 idea
@@ -83,6 +82,7 @@ public class Prj2_schaaf {
       //if 2 ideas, run randomIdea/selectedIdea 2 times
       //if 3 ideas, run randomIdea/selectedIdea 3 times
       //display all results at once
+
     
 //PHASE 3
   //set up empty SAVE array
