@@ -52,21 +52,17 @@ public class Prj2_schaaf {
       		/*5 Insect*/             {"Spider",  "Centipede", "Beetle",      "Fly",        "Roach"},
       		/*6 Woodland Creatures*/ {"Squirrel","Hedgehog",  "Rabbit",      "Deer",       "Bear"},
       		};
+    int ideasLength = ideas.length;
+
 //use directions to display either a completely random idea...
 //APP: 2 buttons
     //APP: button #1
     if (select==0){
-      int ideasLength = ideas.length;
-      int randomIdea = (int)(Math.random() * ideasLength);
-      item = (int)(Math.random() * ideas[randomIdea].length);
-      System.out.println ("Try this: " + ideas[randomIdea][item]);
+      totallyRandom(ideas, ideasLength, item);
 //..or a more specific selection  
     //APP: Drop down lists, then button #2 to submit
     } else if (select==1){
-      System.out.println("Enter a number between to select a list:\n 0-Medium \n 1-Jungle \n 2-Landscape \n 3-Forest \n 4-Country \n 5-Insect \n 6-Woodland Creature");
-      list = input.nextInt();
-      item = (int)(Math.random() * ideas[list].length);
-      System.out.println("Try this: "+ ideas[list][item] /*randomIdeas(list, item)*/);
+      kindaRandom(ideas, ideasLength, item, list, input);
     } else {
       System.out.println("Thanks for playing! Try again.");
     }
@@ -82,7 +78,19 @@ public class Prj2_schaaf {
       //if 2 ideas, run randomIdea/selectedIdea 2 times
       //if 3 ideas, run randomIdea/selectedIdea 3 times
       //display all results at once
+  }
+public static void totallyRandom(String[][] array, int arrayLength, int arrayItem){  
+  int randomIdea = (int)(Math.random() * arrayLength);
+  arrayItem = (int)(Math.random() * array[randomIdea].length);
+  System.out.println (array[randomIdea][arrayItem]);
+}
 
+public static void kindaRandom(String[][] array, int arrayLength, int arrayItem,int arrayList, Scanner input){
+    System.out.println("Enter a number between to select a list:\n 0-Medium \n 1-Jungle \n 2-Landscape \n 3-Forest \n 4-Country \n 5-Insect \n 6-Woodland Creature");
+    arrayList = input.nextInt();
+    arrayItem = (int)(Math.random() * array[arrayList].length);
+    System.out.println(array[arrayList][arrayItem]);
+}
     
 //PHASE 3
   //set up empty SAVE array
@@ -105,7 +113,7 @@ public class Prj2_schaaf {
   * 
   */
 
-   }
+
   
  
 
