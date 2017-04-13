@@ -58,7 +58,13 @@ public class Prj2_schaaf {
 //APP: 2 buttons
     //APP: button #1
     if (select==0){
+      System.out.println("Would you like 1, 2, or 3 random ideas? Enter 1, 2, or 3");
+      int numIdeas = input.nextInt();
+      System.out.println("Make something AWESOME out of this: ");
+      for (int n=0; n<numIdeas; n++){
       totallyRandom(ideas, ideasLength, item);
+      }
+      System.out.println("\nNow go on! Git creatin'!");
 //..or a more specific selection  
     //APP: Drop down lists, then button #2 to submit
     } else if (select==1){
@@ -82,7 +88,7 @@ public class Prj2_schaaf {
 public static void totallyRandom(String[][] array, int arrayLength, int arrayItem){  
   int randomIdea = (int)(Math.random() * arrayLength);
   arrayItem = (int)(Math.random() * array[randomIdea].length);
-  System.out.println (array[randomIdea][arrayItem]);
+  System.out.print (array[randomIdea][arrayItem]+ " ");
 }
 
 public static void kindaRandom(String[][] array, int arrayLength, int arrayItem,int arrayList, Scanner input){
