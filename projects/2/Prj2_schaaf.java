@@ -62,16 +62,20 @@ public class Prj2_schaaf {
       int numIdeas = input.nextInt();
       System.out.println("Make something AWESOME out of this: ");
       for (int n=0; n<numIdeas; n++){
-      totallyRandom(ideas, ideasLength, item);
+      result = totallyRandom(ideas, ideasLength, item);
       }
       System.out.println("\nNow go on! Git creatin'!");
 //..or a more specific selection  
     //APP: Drop down lists, then button #2 to submit
     } else if (select==1){
-      kindaRandom(ideas, ideasLength, item, list, input);
+      result = kindaRandom(ideas, ideasLength, item, list, input);
     } else {
       System.out.println("Thanks for playing! Try again.");
     }
+    ArrayList<String> savedIdeas = new ArrayList<String>();
+    System.out.println("Do you like this idea? Like to save it? Enter 0, if you do.");
+
+    savedIdeas.add(result);
 //display the result to the screen
 //PHASE 1: COMPLETE
     
@@ -84,13 +88,17 @@ public class Prj2_schaaf {
       //if 2 ideas, run randomIdea/selectedIdea 2 times
       //if 3 ideas, run randomIdea/selectedIdea 3 times
       //display all results at once
-  }
+//PHASE 2: COMPLETE
+}
+  
+//method to generate completely random ideas
 public static void totallyRandom(String[][] array, int arrayLength, int arrayItem){  
   int randomIdea = (int)(Math.random() * arrayLength);
   arrayItem = (int)(Math.random() * array[randomIdea].length);
   System.out.print (array[randomIdea][arrayItem]+ " ");
 }
 
+//method to select from certain lists
 public static void kindaRandom(String[][] array, int arrayLength, int arrayItem,int arrayList, Scanner input){
     System.out.println("Enter a number between to select a list:\n 0-Medium \n 1-Jungle \n 2-Landscape \n 3-Forest \n 4-Country \n 5-Insect \n 6-Woodland Creature");
     arrayList = input.nextInt();
@@ -103,7 +111,6 @@ public static void kindaRandom(String[][] array, int arrayLength, int arrayItem,
   //allow user to save idea to SAVE array
   //APP: user click button to save to empty array
   //Home screen/Front page has 3rd option to randomly draw a saved idea
-  //
  
 //PHASE 4 ** IF TIME **
     //create an account object
