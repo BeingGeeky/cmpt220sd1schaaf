@@ -24,13 +24,16 @@ public class BubbleSort {
 	
 	System.out.println("Enter 10 decimal numbers. ");
 	
-	double[] bubble = {1.0, 5.0, 43.0, 23.0, 456.0, 22.0, 42.454};
-	for  (int n = 0; n<=bubble.length;n++){
+	double[] bubble = new double[10];
+	for  (int n = 0; n<10; n++){
       bubble[n] = input.nextDouble();
-	}*/
-	
-	System.out.println(bubble[2]+" pos 2 "+bubble[6]+ " pos 6");
-	
-  }	  
+	}
+  }	 
+  
+public static void bubbleSort{
+	while (<10){//some loop
+		if //another loop
+	}
+}
 }
   
