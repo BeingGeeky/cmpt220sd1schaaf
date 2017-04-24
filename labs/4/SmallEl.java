@@ -29,21 +29,13 @@ public class SmallEl {
 		System.out.println(min(bubble));
 	}
 	public static double min(double[] array){
-		int z = array.length - 1;
-		int y = 0;
-		int x = 0;
-		double arrayOne = array[x];
-		double arrayTwo = array[y];
-		for (int p = 0; p < z; p++){
-			if (array[x] <= array[y]){
-				y++;
-				array[y];
-			}
-			else {
-				array[y] = array[x];
+		double minimum = array[0];
+		for (int i=1; i < array.length; i++){
+			if (array[i] < minimum){
+				minimum = array[i];
 			}
 		}
-		return arrayOne;	
+		return minimum;	
 	}
 }
-// 100.0 20.34 54.2 5.2 4.3 2.3 5.43 543.0 45.0 5.8
+// Test numbers: 100.0 20.34 54.2 5.2 4.3 2.3 5.43 543.0 45.0 5.8
