@@ -31,9 +31,12 @@ public class BubbleSort {
   }	 
   
 public static void bubbleSort{
-	while (<10){//some loop
-		if //another loop
+	double temp = bubble[0];
+	
+ for (int i = 1; i < bubble.length; i++){
+	 bubble[i-1] = myList[i];
 	}
+ bubble[bubble.length-1] = temp;
 }
 }
   
