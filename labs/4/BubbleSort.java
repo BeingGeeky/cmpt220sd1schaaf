@@ -22,21 +22,26 @@ public class BubbleSort {
     
 	Scanner input = new Scanner(System.in);
 	
-	System.out.println("Enter 10 decimal numbers. ");
+	System.out.println("Enter 3 decimal numbers. ");
 	
-	double[] bubble = new double[10];
-	for  (int n = 0; n<10; n++){
+	int[] bubble = new int[3];
+	  for  (int n = 0; n<3; n++){
       bubble[n] = input.nextDouble();
-	}
-  }	 
-  
-public static void bubbleSort{
-	double temp = bubble[0];
-	
- for (int i = 1; i < bubble.length; i++){
-	 bubble[i-1] = myList[i];
-	}
- bubble[bubble.length-1] = temp;
+  	}
+  bubbleSort(bubble);
+  System.out.println("0: "+bubble[0]+ "  1: " + bubble[1] + " 2: " + bubble[2]);
+  }  
+public static void bubbleSort(double[] array){
+
+  for (int i = 1; i < array.length; i++){
+   double temp = array[i-1];
+
+   if (temp > array[i]){
+   array[i-1] = array[i];
+   array[i] = temp;
+   } 
+  }
 }
+
 }
   
