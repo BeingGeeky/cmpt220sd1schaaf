@@ -22,15 +22,18 @@ public class BubbleSort {
     
 	Scanner input = new Scanner(System.in);
 	
-	System.out.println("Enter 3 decimal numbers. ");
+	System.out.println("Enter 10 decimal numbers. ");
 	
-	int[] bubble = new int[3];
-	  for  (int n = 0; n<3; n++){
+	double[] bubble = new double[10];
+	  for  (int n = 0; n<10; n++){
       bubble[n] = input.nextDouble();
   	}
   bubbleSort(bubble);
-  System.out.println("0: "+bubble[0]+ "  1: " + bubble[1] + " 2: " + bubble[2]);
-  }  
+  System.out.println("The sorted array is: ");
+  for (int x= 0; x < bubble.length; x++){
+    System.out.print(bubble[x] +"  ");
+  }
+}  
 public static void bubbleSort(double[] array){
 
   for (int i = 1; i < array.length; i++){
