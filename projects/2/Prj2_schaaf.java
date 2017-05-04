@@ -10,6 +10,7 @@ This file contains the code to clean heart rate data
 */
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Prj2_schaaf {
   public static void main(String[] args) {
@@ -43,15 +44,31 @@ public class Prj2_schaaf {
     String result;
 //Set up selection arrays 
     String[][] ideas = {                   /*items*/
-      		/*lists                    1         2            3              4             5 */ 
-      		/*0 Mediums*/            {"Pastel",  "Oil",       "Watercolor",  "Acrylic",    "Colored Pencils"},
-            /*1 Jungle*/             {"Canopy",  "Monkeys",   "Snakes",      "Jaguar",     "Insects"},
-      		/*2 Lanscape*/           {"Ocean",   "Sunset",    "Forest",      "Mountains",  "Beach"},
-      		/*3 Forest*/             {"Tree",    "Stream",    "Leaves",      "Creatures",  "Deer"},
-      		/*4 Country*/            {"Ireland", "Egypt",     "China",       "India",      "Russia"},
-      		/*5 Insect*/             {"Spider",  "Centipede", "Beetle",      "Fly",        "Roach"},
-      		/*6 Woodland Creatures*/ {"Squirrel","Hedgehog",  "Rabbit",      "Deer",       "Bear"},
-      		};
+      		/*lists                    1                  2                     3                4                5 */ 
+      		/*0 Mediums*/            {"Pastel",           "Oil",                "Watercolor",    "Acrylic",                 "Colored Pencils"},
+      /*1 Jungle*/             {"Canopy",           "Monkeys",            "Snakes",        "Jaguar",                  "Insects"},
+      		/*2 Landscape*/          {"Ocean",            "Sunset",             "Forest",        "Mountains",               "Beach"},
+      		/*3 Forest*/             {"Tree",             "Stream",             "Leaves",        "Creatures",               "Deer"},
+      		/*4 Country*/            {"Ireland",          "Egypt",              "China",         "India",                   "Russia"},
+      		/*5 Insect*/             {"Spider",           "Centipede",          "Beetle",        "Fly",                     "Roach"},
+      		/*6 Woodland Creatures*/ {"Squirrel",         "Hedgehog",           "Rabbit",        "Deer",                    "Bear"},
+      		/*7 Big cats*/           {"Puma",             "Mountain Lion",      "Lion",          "Cougar",                  "Jaguar"},
+      		/*8 Snakes*/             {"Cobra",            "Garter Snake",       "Anaconda",      "Rattle Snake",            "Green Tree Snake"},
+      		/*9 Art Movements1*/     {"Impressionist",    "Abstract",           "Surrealist",    "Cubism",                  "Realism"},
+      		/*10 Primary Colors*/    {"Blue",             "Red",                "Yellow",        "Green",                   "Orange"},
+      		/*11 Texture*/           {"Fluffy",           "Brick",              "Linen",         "Satin",                   "Burlap"},
+      		/*12 Fairy Tales*/       {"Snow White",       "Red Riding Hood",    "Cinderella",    "Pinocchio",               "Sleeping Beauty"},
+      		/*13 Witches*/           {"Witches",          "Moonlight",          "Black Cat",     "Pentagram",               "Rule of Three"},
+      		/*14 Fairies*/           {"Winter Fairy",     "Summer Fairy",       "Spring Fairy",  "Water Fairy",             "Autumn Fairy"},
+      		/*15 Romance*/           {"Lace",             "Roses",              "Champagne",     "Kisses",                  "Music"},
+      /*16 World Cities*/      {"Paris",            "Prague",             "London",        "New York",                "Florence"},
+      /*17 Artists*/           {"Michaelangelo",    "Picasso",            "Dali",          "Kandinsky",               "Monet"},
+      /*18 Candy*/             {"Gummies",          "Chocolate",          "Licorise",      "Hard Candy",              "Bubble Gum"},
+      /*19 Art Movements2*/    {"Expressionism",    "Art Deco",           "Art Nouveau",   "Arts & Crafts Movement",  "Bauhaus"},
+      /*20 Art Movements3*/    {"Constructivism",   "Dada",               "Fauvism",       "Futurism",                "Minimalism"},
+      /*21 Art Movements4*/    {"Pop Art",          "Post-Impressionism", "Op Art",        "Minimalism",              ""},
+      };
+
     int ideasLength = ideas.length;
 
 //use directions to display either a completely random idea...
@@ -62,20 +79,18 @@ public class Prj2_schaaf {
       int numIdeas = input.nextInt();
       System.out.println("Make something AWESOME out of this: ");
       for (int n=0; n<numIdeas; n++){
-      result = totallyRandom(ideas, ideasLength, item);
+      totallyRandom(ideas, ideasLength, item);
       }
-      System.out.println("\nNow go on! Git creatin'!");
+
 //..or a more specific selection  
     //APP: Drop down lists, then button #2 to submit
     } else if (select==1){
-      result = kindaRandom(ideas, ideasLength, item, list, input);
+       kindaRandom(ideas, ideasLength, item, list, input);
+       System.out.println("\nNow go on! Git creatin'!\n");
     } else {
       System.out.println("Thanks for playing! Try again.");
     }
-    ArrayList<String> savedIdeas = new ArrayList<String>();
-    System.out.println("Do you like this idea? Like to save it? Enter 0, if you do.");
 
-    savedIdeas.add(result);
 //display the result to the screen
 //PHASE 1: COMPLETE
     
@@ -100,35 +115,10 @@ public static void totallyRandom(String[][] array, int arrayLength, int arrayIte
 
 //method to select from certain lists
 public static void kindaRandom(String[][] array, int arrayLength, int arrayItem,int arrayList, Scanner input){
-    System.out.println("Enter a number between to select a list:\n 0-Medium \n 1-Jungle \n 2-Landscape \n 3-Forest \n 4-Country \n 5-Insect \n 6-Woodland Creature");
+    System.out.println("Enter a number between to select a list:\n 0 Medium\n 1 Jungle\n 2 Landscape\n 3 Forest\n 4 Country\n 5 Insect\n 6 Woodland Creatures\n 7 Big cats\n 8 Snakes\n 9 Art Movements1\n 10 Primary Colors\n 11 Texture\n 12 Fairy Tales\n 13 Witches\n 14 Fairies\n 15 Romance\n 16 World Cities\n 17 Artists\n 18 Candy\n 19 Art Movements2\n 20 Art Movements3\n 21 Art Movements4");
+    System.out.println("Make something AWESOME out of this: ");
     arrayList = input.nextInt();
     arrayItem = (int)(Math.random() * array[arrayList].length);
     System.out.println(array[arrayList][arrayItem]);
-}
-    
-//PHASE 3
-  //set up empty SAVE array
-  //allow user to save idea to SAVE array
-  //APP: user click button to save to empty array
-  //Home screen/Front page has 3rd option to randomly draw a saved idea
- 
-//PHASE 4 ** IF TIME **
-    //create an account object
-    //object has:
-      //name
-      //email
-        //email verfication method
-      //password
-        //password verification method
-    
-    
- /* Methods go here
-  * 
-  */
-
-
-  
- 
-
-
+  }
 }
