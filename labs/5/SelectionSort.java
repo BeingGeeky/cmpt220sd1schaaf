@@ -6,7 +6,7 @@ assignment: lab 5-7.20 Revise Selection Sort
 due date: March 1, 2017
 version: 1.0
 
-This file contains the code to 7.20 Revise selection sort. 
+This file contains the code to 7.20 Revise selection sort. In Section 7.11, you used selection sort to sort an array. The selection-sort method repeatedly finds the smallest number in the current array and swaps it with the first. Rewrite this program by finding the largest numbers and swapping it with the last. Write a test program that reads in ten doubl numbers, invokes the method, and displays the sorted numbers.
 */
 import java.util.Scanner;
 
@@ -15,42 +15,42 @@ public class SelectionSort {
 
     Scanner input = new Scanner(System.in);
     System.out.println("Enter 10 double numbers.");
+    
     //array input
-    double[] list = new double[10];
-
+    double[] listNumbers = new double[10];
     for (int n = 0; n < 10; n++){
-      list[n] = input.nextDouble();
-    }
+      listNumbers[n] = input.nextDouble();
+    }//end for loop
     
-    //prints array
-    System.out.println("Array you input is:   ");
-    for (int a =0; a < list.length;a++){
-      System.out.print(list[a] +" ");
-    }
-    
-    //
-    for (int i = 0; i < list.length - 1; i++){
-      double currentMin = list[i];
-      int currentMinIndex = i;
-      
-      //
-      for (int j = i + 1; j < list.length; j++) {
-        if (currentMin < list[j]) {
-          currentMin = list[list.length - 1];
-          currentMinIndex = j;
-        }
-      }
-      
-      //
-      if (currentMinIndex != i){
-        list[currentMinIndex] = list[i];
-        list[i] = currentMin;
-      }
-    }
+    selectionSort(listNumbers);
+
     System.out.println("\n The rearranged array is: ");
-    for (int p = 0; p < list.length; p++){
-    System.out.print(list[p] + " ");
-    }
-  }
-}
+    printArray(listNumbers, listNumbers.length);
+  }//end main method
+
+  public static void printArray(double[] array, double arrayLength){
+    //method to print array
+    for (int n=0; n < arrayLength; n++){
+    System.out.print(array[n] + " ");
+    }//end for statement
+  }//end print array method
+
+  public static void selectionSort(double[] list){
+    for (int i = 0; i < list.length-1; i++){
+      int currentMaxIndex = i;
+      for (int j = i+1; j < list.length; j++) {
+        if (list[currentMaxIndex] > list[j]) {
+          currentMaxIndex = j;
+        }//end if loop
+      }//end for loop
+      
+      if (currentMaxIndex != i){
+        double temp = list[i];
+        list[i] = list[currentMaxIndex];
+        list[currentMaxIndex] = temp;
+      }//end if loop
+    }//end outer for loop
+  }//end selectionSort method
   
+}//end program
+
