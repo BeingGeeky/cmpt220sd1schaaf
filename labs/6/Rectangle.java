@@ -1,26 +1,37 @@
 /*
-file: Lab 5 7.32 PartList.java
+file: Lab 6 9.1
 author: Cassie Schaaf
 course: CMPT 220
-assignment: lab 5-7.32 Partition of a List
+assignment: lab 6 - 9.1 Rectangle class
 due date: March 1, 2017
 version: 1.0
 
-This file contains the code to 7.32 Partition of a List
-Write the following method that partitions the list using the first element, called a pivot. 
-
-public static int partition(int[] list)
-
-After the partition, the elements in the list are rearranged so that all the elements before the pivot are less than or equal to the pivot and the elements after the pivot are greater than the pivot. ...  Write a test program that prompts the user to enter a list and displays the list after the partition.
+This file contains the code to 9.1
 */
 import java.util.Scanner;
 
 public class Rectangle {
  Rectangle rectangle1 = new Rectangle();
- Rectangle();
+
 double width;
 double height;
 
+Rectangle(){
+  
+}
+
+Rectangle(double newWidth, double newHeight){
+  
+}
+
+public static double getArea(double width, double height){
+  double area = width*height;
+  return area;
+}
+
+public static double getPerimeter(double width, double height){
+  double perim = (width + width) + (height + height);
+}
 
   }//end main class
 public class Rectangle{
