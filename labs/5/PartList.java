@@ -39,8 +39,8 @@ public class PartList {
       spotLoc++;
     } else{
       //swap to end
-      temp=part[0];
-      part[0]=part[lastSpot];
+      temp=part[spotLoc];
+      part[spotLoc]=part[lastSpot];
       part[lastSpot]= temp;
       pivot = part[lastSpot];
     }
