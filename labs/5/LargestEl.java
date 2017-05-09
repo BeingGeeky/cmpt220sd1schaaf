@@ -34,7 +34,7 @@ public class LargestEl {
 
     double [][] matrix = new double[rowL][columnL];
 
-	    System.out.println("Enter" + rowL + " rows & " + columnL + " columns");	
+	    System.out.println("Enter " + rowL + " rows & " + columnL + " columns");	
 
     //fill array
     for (int i=0; i < matrix.length; i++){
@@ -42,22 +42,30 @@ public class LargestEl {
         matrix[i][n] = input.nextDouble();
       }//inner for loop
     }//outer for loop
-
-	    int maxRow=0;
-	    int indexOfMaxRow = 0;
-	    int r=0;
-	    int c=1;
-	
-	    for(int x = 0; x < matrix.length; x++){
-	      for (int y = 0; y < matrix[x].length; y++){
-	        if (matrix[maxRow][indexOfMaxRow] < matrix[x][y]){
-	          maxRow=x;
-	          indexOfMaxRow=y;
-	        }//if loop
-      	}//end inner for loop
-    }//end for loop
-	
-	    System.out.println("The location of the largest element is: ("+maxRow +", "+ indexOfMaxRow+")");
+   
+    locateLargest(matrix);
+    
   }//end main class
+  
+  public static int[] locateLargest(double[][] a){
+    int maxRow=0;
+    int indexOfMaxRow = 0;
+    int r=0;
+    int c=1;
+
+    for(int x = 0; x < a.length; x++){
+      for (int y = 0; y < a[x].length; y++){
+        if (a[maxRow][indexOfMaxRow] < a[x][y]){
+          maxRow=x;
+          indexOfMaxRow=y;
+        }//if loop
+      }//end inner for loop
+    }//end for loop
+    int[] result = new int[2];
+    result[0]=maxRow;
+    result[1]=maxRow;
+    System.out.println("The location of the largest element is: ("+maxRow +", "+ indexOfMaxRow+")");
+    return result;
+  }
 }//end program
 
