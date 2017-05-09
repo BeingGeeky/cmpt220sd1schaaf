@@ -19,41 +19,50 @@ This file contains the code to 8.13 Largest element in array
 * two-dimensional array and displays the location of the largest element in the  *
 * array.                                                                         *
 *********************************************************************************/
-*/
+
 import java.util.Scanner;
 
-public class BubbleSort {
+public class LargestEl {
   public static void main(String[] vargs){
-	  
-  /* loop to fill array
-   * loop to sort array
-   * */
     
 	Scanner input = new Scanner(System.in);
-	
-	System.out.println("Enter 10 decimal numbers. ");
-	
-	double[] bubble = new double[10];
-	  for  (int n = 0; n<10; n++){
-      bubble[n] = input.nextDouble();
+int row = 0;
+int column = 0;
+
+int[][] matrix = new int[row][column];
+
+	System.out.println("Enter the row and column numbers.");
+row = input.nextInt();
+column = input.nextInt();
+
+	System.out.println("Enter " + matrix.length + " rows " + matrix[0].length );	
+ 
+	  for  (int n = 0; n< row-1; n++){
+	    int p=0;
+    matrix[n][p] = input.nextInt();
+    for (p = 0; p<column-1;p++){
+      matrix[n][p] = input.nextInt();
+    }
   	}
-  bubbleSort(bubble);
-  System.out.println("The sorted array is: ");
-  for (int x= 0; x < bubble.length; x++){
-    System.out.print(bubble[x] +"  ");
-  }
-}  
-public static void bubbleSort(double[] array){
-
-  for (int i = 1; i < array.length; i++){
-   double temp = array[i-1];
-
-   if (temp > array[i]){
-   array[i-1] = array[i];
-   array[i] = temp;
-   } 
-  }
-}
-
-}
+	  
+	  int maxRow=0;
+	  int indexOfMaxRow = 0;
+	  
+	  for(column=0; column<matrix[0].length; column++){
+	    maxRow += matrix[0][column];
+	  }
+	  
+	  for (row = 1; row < matrix.length; row++){
+	    int totalOfThisRow = 0;
+	    for (column = 0; column < matrix[row].length; column++){
+	      totalOfThisRow += matrix[row][column];
+	    }
+	    if (totalOfThisRow > maxRow){
+	      maxRow = totalOfThisRow;
+	      indexOfMaxRow = row;
+	    }
+	  }
+	  System.out.println("Maximum value is: ");  
+  }//end main class
+}//end program
   

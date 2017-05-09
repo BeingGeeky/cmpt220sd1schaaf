@@ -36,7 +36,7 @@ public class CelFah {
   public static double celsiusToFahrenheit(double celsius){
 	//fahrenheit calculation
 	double fahrenheit = (1.8 * celsius) + 32;
-	System.out.println(celcius + fahrenheit + " degrees Fahrenheit");
+	System.out.println(celsius + “    “ fahrenheit + "          ");
 	double newTemp = fahrenheit;
 	return fahrenheit;
   }

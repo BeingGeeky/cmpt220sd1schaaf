@@ -1,8 +1,8 @@
 /*
-file: BubbleSort.java
+file: Lab 5 7.20 Revise Selection Sort.java
 author: Cassie Schaaf
 course: CMPT 220
-assignment: lab 3-7.18 Bubble Sort
+assignment: lab 5-7.20 Revise Selection Sort
 due date: March 1, 2017
 version: 1.0
 
