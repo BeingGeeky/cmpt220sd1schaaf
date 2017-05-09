@@ -17,7 +17,7 @@ public class RectangleObj {
  System.out.println("The width of rectangle1 is " + rectangle1.width);
  System.out.println("The height of rectangle1 is " + rectangle1.height);
  System.out.println("The area of rectangle1 is " + rectangle1.getArea());
- System.out.println("The perimeter of rectangle1 is " + rectangle1.getPerimeter());
+ System.out.println("The perimeter of rectangle1 is " + rectangle1.getPerimeter() + "\n");
  
  Rectangle rectangle2 = new Rectangle(3.5, 35.9);
  System.out.println("The width of rectangle2 is " + rectangle2.width);
@@ -26,24 +26,25 @@ public class RectangleObj {
  System.out.println("The perimeter of rectangle2 is " + rectangle2.getPerimeter());
   }//end main method
   
-  class Rectangle{
+  static class Rectangle{
 double width;
 double height;
 
 Rectangle(){
-}//end constructor
 
+}//end constructor
+  
 Rectangle(double newWidth, double newHeight){
   width = newWidth;
   height = newHeight;
 }
 
-double getArea(double width, double height){
+double getArea(){
   return width*height;
 
 }//end area
 
-double getPerimeter(double width, double height){
+double getPerimeter(){
   return (width + width) + (height + height);
 }//end perimeter
   }//end rectangle class
