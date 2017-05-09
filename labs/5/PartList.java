@@ -24,17 +24,27 @@ public class PartList {
     }//end for loop
     printArray(part, arrayLength);
 
-  //  partition(listNumbers);
-    int pivot = part[0];
-    int lastSpot=arrayLength-1;
-    int temp=0;
-    temp = part[lastSpot];
-  //  part[lastSpot]= temp;
-    part[0]=part[lastSpot];
-    part[lastSpot]= temp;
-    //  if (partList[0]<pivot){
-    //  part[i]=part[]
-   // }
+  // pivot
+    int pivot = part[0];//assign first pivot location
+    int lastSpot=arrayLength-1;//last spot of array
+    int pivotLoc = 0;//initial pivot location
+    int temp=0;//placeholder
+    
+
+    int spotLoc = 0;
+    
+    if (pivot>part[spotLoc+1]){
+      part[spotLoc] = part[spotLoc++];
+      part[spotLoc++] = pivot;
+      spotLoc++;
+    } else{
+      //swap to end
+      temp=part[0];
+      part[0]=part[lastSpot];
+      part[lastSpot]= temp;
+      pivot = part[lastSpot];
+    }
+
     System.out.println("\n The rearranged array is: ");
     printArray(part, arrayLength);
   }//end main method
